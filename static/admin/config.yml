@@ -1,0 +1,106 @@
+backend:
+  name: git-gateway
+  branch: master
+
+local_backend: true
+
+publish_mode: editorial_workflow
+
+media_folder: "static/assets"
+public_folder: "/assets"
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "index"
+        name: "index"
+        file: "src/content/index.md"
+        fields:
+          - { label: "Template", name: "template", widget: "hidden", default: "other" }
+          - { label: "Name (URL)", name: "name", widget: "hidden", default: "index" }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: "title", name: "title", widget: "string" } 
+              - { label: "description", name: "description", widget: "text" } 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Image alt text", name: alttext, widget: string }    
+          - label: Spotlight
+            name: spotlight
+            widget: object
+            fields:
+              - { label: "Spotlight title", name: "title", widget: "markdown" }
+              - { label: "Spotlight subtitle", name: "subtitle", widget: "markdown" }     
+              - label: Spotlight items
+                name: items
+                widget: list
+                fields:
+                  - { label: "Item title", name: title, widget: string }
+                  - { label: "Item subtitle", name: subtitle, widget: string }
+                  - { label: "Item image", name: image, widget: image }
+                  - { label: "Item image alt text", name: alttext, widget: string }
+                  - { label: "Image link text", name: linktext, widget: string, required: false }
+                  - { label: "Item link", name: link, widget: string, required: false }
+          - label: Sections
+            name: section
+            widget: list
+            fields:
+              - { label: "Section title", name: title, widget: string }
+              - { label: "Section subtitle", name: subtitle, widget: string, required: false }
+              - { label: "Section subtitle colour (ADMIN change only)", name: subtitlecolour, widget: "select", options: ["none", "text-gradient-greens"], required: false }
+              - { label: "Section description", name: description, widget: string }
+              - { label: "Section image", name: image, widget: image }
+              - { label: "Section image alt text", name: alttext, widget: string }
+              - { label: "Section image placement", name: "placement", widget: "select", options: ["card", "left", "right"] }
+              - { label: "Button link", name: btnlink, widget: string, required: false }
+              - { label: "Button colour", name: "btncolour", widget: "select", options: ["ficon-m4"], required: false }
+          - label: Latest insights
+            name: insights
+            widget: object
+            fields:
+              - { label: "Latest insights title", name: "title", widget: "string" }    
+              - label: Latest insights cards
+                name: items
+                widget: list
+                fields:
+                  - { label: "Insight item title", name: title, widget: string }
+                  - { label: "Insight item subtitle", name: subtitle, widget: string, required: false }
+                  - { label: "Insight item description", name: description, widget: string }
+                  - { label: "Insight item image", name: image, widget: image }
+                  - { label: "Insight item image alt text", name: alttext, widget: string }
+                  - { label: "Insight item link", name: link, widget: string }
+
+      - label: "Legal Notice"
+        name: "legal-notice"
+        file: "src/content/legal-notice.md"
+        fields:
+          - { label: "Template", name: "template", widget: "select", options: ["legal"] }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Image alt text", name: "alttext", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+
+
+  - name: "about"
+    label: "About"
+    folder: "src/content/about"
+    create: true
+    slug: "{{slug}}"
+    editor:
+     preview: true
+    fields:
+      - { label: "Template", name: "template", widget: "select", options: ["about"] }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Image alt text", name: "alttext", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" } 
