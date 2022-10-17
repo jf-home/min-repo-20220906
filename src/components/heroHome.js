@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { MDBMask, MDBRow, MDBCol,MDBView, MDBContainer, MDBBtn } from 'mdbreact'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown,  } from '@fortawesome/pro-regular-svg-icons'
+import { faChevronDown,  } from '@fortawesome/free-solid-svg-icons'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 

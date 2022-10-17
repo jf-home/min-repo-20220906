@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { MDBRow, MDBCol, MDBBtn, MDBCollapse, MDBContainer } from 'mdbreact'
 import Link from 'gatsby-link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/pro-regular-svg-icons'
+import { faChevronRight } from '@fortawesome/free-regular-svg-icons'
 
 export default class CollapsePage extends Component {
   constructor(props) {

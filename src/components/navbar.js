@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBContainer, MDBDropdown, 
   MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from 'mdbreact'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/pro-duotone-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'gatsby'
 
 class NavBarPage extends Component {

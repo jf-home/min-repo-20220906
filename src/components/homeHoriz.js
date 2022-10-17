@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { MDBRow, MDBCol, MDBBtn } from 'mdbreact'
 import Link from 'gatsby-link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/pro-regular-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 const HomeHoriz = ({ title, subtitle, subtitleColour, description, image, alttext, placement, titleClass, subtitleClass, link, colour  }) => (
